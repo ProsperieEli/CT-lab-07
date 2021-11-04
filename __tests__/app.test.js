@@ -26,21 +26,21 @@ describe('03_separation-of-concerns-demo routes', () => {
           id: '1',
           quantity: 10
         });
-
-    it('responds with an array of all orders', () => {
-          return request(app)
-          .get('/api/v1/orders')
-          .then(res => {
-            expect(res.body).toEqual([
-              {
-                id: '1',
-                quantity: 10
-              }
-            ])
-          })
-      
-        });
-      
       });
+      
+  });
+
+  it('responds with an array of all orders', () => {
+    return request(app)
+    .get('/api/v1/orders')
+    .then(res => {
+      expect(res.body).toEqual([
+        {
+          id: '1',
+          quantity: 10
+        }
+      ])
+    })
+
   });
 });
